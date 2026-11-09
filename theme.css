@@ -62,7 +62,6 @@ input:focus, textarea:focus { border-color: #ac8cdb; box-shadow: 0 0 0 4px #ac8c
 .toast { background: #7960a3; border: 2px solid #ead6f4; }
 footer { border-top: 2px dashed #e8d7ef; gap: 16px; flex-wrap: wrap; }
 footer a { color: #8660ad; text-underline-offset: 4px; }
-.wall-tools { display: flex; align-items: center; gap: 12px; }
 .refresh { color: #805e9c; background: #f4eafa; border: 1px solid #dfcbea; border-radius: 18px; padding: 7px 12px; font-size: 12px; }
 .refresh:disabled { opacity: .6; cursor: wait; }
 .storage-status { font-size: 11px; color: #8d789c; line-height: 1.7; margin: 0 0 18px; }
