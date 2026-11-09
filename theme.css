@@ -40,6 +40,10 @@ input:focus, textarea:focus { border-color: #ac8cdb; box-shadow: 0 0 0 4px #ac8c
 .submit:disabled { opacity: .65; cursor: wait; transform: none; }
 .preview-panel { background-color: #e9e2fa; background-image: radial-gradient(#cbb9e5 1.3px, transparent 1.3px); background-size: 23px 23px; }
 .preview-top, .preview-top>span+span, .preview-foot { color: #79628c; }
+.preview-foot { background: #ffffff80; border: 1px dashed #c7acdd; border-radius: 16px; padding: 10px 16px; min-height: 44px; max-width: 100%; transition: background .2s, transform .2s; }
+.preview-foot:hover { background: #fff3fa; transform: rotate(0deg) translateY(-2px); }
+.preview-foot #encouragement-text { font-size: 13px; margin-left: 0; line-height: 1.8; }
+.quote-hint { font-size: 10px; color: #79628c; margin: 10px 0 0; }
 .portrait-paper { background: #fffdfd; border-radius: 5px; box-shadow: 5px 8px 0 #cbb9e54d, 0 12px 35px #5c398c13; }
 .paper-tape { background: #ffc5d9ce; }
 .avatar { background: radial-gradient(circle at 30% 30%, #ffe9bd, #ffd5db); position: relative; }

@@ -3,6 +3,28 @@ const hairNames = ['焦糖翹翹', '莓果雙丸子', '紫芋鮑伯', '薄荷捲
 const faceNames = ['笑眼彎彎', '電量耗盡', '眼淚汪汪', '開心尖叫', '氣成河豚', '愛心發射'];
 const presets = ['☀️ 今天心情超好', '🫠 電量只剩 1%', '🌿 想放空一下', '💪 繼續努力中', '☁️ 有一點點低落', '✨ 小事也值得開心'];
 const presetText = (preset) => preset.slice(preset.indexOf(' ') + 1);
+const encouragements = [
+  '不必完美，只要是你。',
+  '慢慢來，你正走在自己的路上。',
+  '今天的小小一步，也值得為自己鼓掌。',
+  '休息一下，也是好好前進的一部分。',
+  '你值得被溫柔對待，也包括被自己。',
+  '每一種心情，都值得被好好接住。',
+  '先照顧好自己，再出發也來得及。',
+  '不需要和別人一樣，你有自己的光。',
+  '今天的你，已經很努力了。',
+  '小小的快樂，也能讓今天亮一點。',
+  '把步伐放慢，也能看見沿途的美好。',
+  '允許自己有不順利的日子。',
+  '能說出自己的心情，就是一種勇敢。',
+  '給自己一點時間，花也有自己的花期。',
+  '你不需要一直很棒，也值得被喜歡。',
+  '別忘了，也為自己的努力說聲謝謝。',
+  '今天先做到這裡，也可以。',
+  '把溫柔留一份給自己。',
+  '每一次重新開始，都算數。',
+  '願你在平凡的今天，遇見一點小驚喜。'
+];
 let hair = 0, face = 0, records = [], toastTimer;
 const storageKey = 'kimochi-moments-v1';
 const config = window.KIMOCHI_CONFIG || {};
@@ -99,6 +121,11 @@ for (const [type, names] of [['hair', hairNames], ['face', faceNames]]) {
 $('#name').addEventListener('input', () => { $('#name').setCustomValidity(''); updatePreview(); });
 $('#mood').addEventListener('input', () => { $('#mood').setCustomValidity(''); updatePreview(); });
 $('#random').addEventListener('click', () => { hair = Math.floor(Math.random() * hairs.length); face = Math.floor(Math.random() * faces.length); updatePreview(); });
+$('#encouragement').addEventListener('click', () => {
+  const text = $('#encouragement-text');
+  const choices = encouragements.filter(sentence => sentence !== text.textContent);
+  text.textContent = choices[Math.floor(Math.random() * choices.length)];
+});
 $('#checkin').addEventListener('submit', async event => {
   event.preventDefault();
   for (const [id, message] of [['name', '請輸入你的名字或暱稱'], ['mood', '寫下一句心情，或點選一個預設心情吧']]) {
