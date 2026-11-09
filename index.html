@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf8f2">
+  <meta name="theme-color" content="#fff5fa">
   <meta name="description" content="選一個表情，用一句話留下此時此刻的心情。">
   <title>此時此刻 — 心情打卡</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="config.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -27,7 +29,7 @@
       </form>
       <aside class="preview-panel"><div class="preview-top"><span><i></i> 此刻的你</span><span>LIVE PREVIEW</span></div><div class="portrait-paper"><span class="paper-tape"></span><div id="avatar" class="avatar"></div><div class="preview-caption"><span id="preview-name">嗨，這是我</span><p id="preview-mood">每一種心情，都有自己的樣子。</p></div><span class="paper-star" aria-hidden="true">✧</span></div><p class="preview-foot">不必完美，只要是你。<span>♡</span></p></aside>
     </div>
-    <section class="wall"><div class="wall-heading"><div><div class="eyebrow">MOMENTS, COLLECTED.</div><h2>心情小角落 <span id="record-count">0 個此刻</span></h2></div><span class="wall-note">把日常，變成值得收藏的小事。</span></div><div id="records" class="records"></div></section>
-  </main><footer><span>☺ 此時此刻 KIMOCHI</span><span>慢慢來，今天也辛苦了。</span></footer><div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <section class="wall"><div class="wall-heading"><div><div class="eyebrow">MOMENTS, COLLECTED.</div><h2>心情小角落 <span id="record-count">0 個此刻</span></h2></div><button id="refresh" class="refresh" type="button" hidden>↻ 更新心情牆</button></div><p id="storage-status" class="storage-status" role="status"></p><div id="records" class="records"></div></section>
+  </main><footer><span>☺ 此時此刻 KIMOCHI</span><a id="admin-link" href="#" hidden target="_blank" rel="noopener">管理打卡紀錄 ↗</a><span>慢慢來，今天也辛苦了。</span></footer><div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
