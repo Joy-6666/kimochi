@@ -23,7 +23,37 @@ const encouragements = [
   '今天先做到這裡，也可以。',
   '把溫柔留一份給自己。',
   '每一次重新開始，都算數。',
-  '願你在平凡的今天，遇見一點小驚喜。'
+  '願你在平凡的今天，遇見一點小驚喜。',
+  '再小的進步，也是你努力的證明。',
+  '你可以用自己的速度，靠近想去的地方。',
+  '偶爾停下來，是為了聽見自己的聲音。',
+  '今天還有好多值得期待的小事。',
+  '你的存在，本身就很珍貴。',
+  '不用急著有答案，先陪自己待一會兒。',
+  '給自己一個擁抱，今天也辛苦了。',
+  '就算走得慢，你也沒有白走。',
+  '勇敢不一定大聲，也可以是再試一次。',
+  '把今天過成自己喜歡的一小格。',
+  '別讓一次不順利，替你定義全部的自己。',
+  '你正在學習，也正在慢慢長大。',
+  '心裡有點累的時候，就對自己輕一點。',
+  '好好吃飯、好好睡覺，也是在認真生活。',
+  '每一個認真的你，都值得被看見。',
+  '不用撐成別人的樣子，做自己就很好。',
+  '願你相信，自己也有創造美好的能力。',
+  '今天可以先做一件讓自己開心的小事。',
+  '你走過的每一步，都在累積自己的力量。',
+  '就算今天有點灰，也可以留一盞小燈。',
+  '練習喜歡自己，從今天的一句鼓勵開始。',
+  '遇到困難時，尋求幫忙也是一種力量。',
+  '把注意力放回此刻，你已經在這裡了。',
+  '你可以一邊不確定，一邊勇敢往前走。',
+  '為自己的小小成就，開一場迷你慶祝。',
+  '有些美好，正在日常的小角落等你。',
+  '讓自己喘口氣，世界可以等一下。',
+  '你值得擁有讓自己安心的生活。',
+  '今天的心情，明天也可以有新的樣子。',
+  '願你今天，也能找到一個微笑的理由。'
 ];
 let hair = 0, face = 0, records = [], toastTimer;
 const storageKey = 'kimochi-moments-v1';
@@ -121,6 +151,7 @@ for (const [type, names] of [['hair', hairNames], ['face', faceNames]]) {
 $('#name').addEventListener('input', () => { $('#name').setCustomValidity(''); updatePreview(); });
 $('#mood').addEventListener('input', () => { $('#mood').setCustomValidity(''); updatePreview(); });
 $('#random').addEventListener('click', () => { hair = Math.floor(Math.random() * hairs.length); face = Math.floor(Math.random() * faces.length); updatePreview(); });
+$('#encouragement-text').textContent = encouragements[Math.floor(Math.random() * encouragements.length)];
 $('#encouragement').addEventListener('click', () => {
   const text = $('#encouragement-text');
   const choices = encouragements.filter(sentence => sentence !== text.textContent);
